@@ -21,6 +21,8 @@ void Count(int[]array)
     }
     Console.WriteLine($"пользователь ввел: {count} положительных чисел");
 }
+try
+{
 Console.WriteLine("Введите кол-во чисел");
 int M = Convert.ToInt32(Console.ReadLine());
 int [] array = new int[M];
@@ -31,3 +33,8 @@ for (int i = 0; i < M; i++)
 }
 PrintArray(array);
 Count(array);
+}
+catch
+{
+    System.Console.WriteLine("Введите, пожалуйста, целое число!");
+}
