@@ -54,9 +54,11 @@ int[] MaxMin(int[,] array, int[]info)// нашли максимальное чи
 }
 void InputInfo(int []info)// выводим информацию с помощью массива info
 {
-    Console.WriteLine($"Максимальное значение этого массива равно:{info[0]} индекс строки: {info[1]} индекс столбца :{info[2]}");
-    Console.WriteLine($"Минимальное значение этого массива равно:{info[3]} индекс строки: {info[4]} индекс столбца :{info[5]}");
+    Console.WriteLine($"Максимальное значение этого массива равно: {info[0]} (индекс строки: {info[1]} индекс столбца : {info[2]})");
+    Console.WriteLine($"Минимальное значение этого массива равно: {info[3]} (индекс строки: {info[4]} индекс столбца : {info[5]})");
 }
+try
+{
 Console.WriteLine("Введите кол-во строк");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите кол-во столбцов");
@@ -66,3 +68,8 @@ PrintArray(array);
 int []info0 =new int [6];
 int[]info1=MaxMin(array,info0);
 InputInfo(info1);
+}
+catch
+{
+    System.Console.WriteLine("Введите, пожалуйста, целое число!");
+}
